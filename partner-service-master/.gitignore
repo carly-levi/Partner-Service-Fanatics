@@ -1,0 +1,46 @@
+# Compiled Object files, Static and Dynamic libs (Shared Objects)
+*.o
+*.a
+*.so
+**/*.DS_Store
+# Binaries for programs and plugins
+*.exe
+*.dll
+*.so
+*.dylib
+*.prof
+
+# Test binary, build with `go test -c`
+*.test
+
+# Folders
+_obj
+_test
+
+# Project-local vendor
+vendor
+
+# Editor files
+.vscode
+.idea
+
+# Architecture specific extensions/prefixes
+*.[568vq]
+[568vq].out
+
+*.cgo1.go
+*.cgo2.c
+_cgo_defun.c
+_cgo_gotypes.go
+_cgo_export.*
+
+_testmain.go
+
+# cover
+**/*.out
+
+# Compiled binary
+addsvc
+
+partner_service.pb.gw.go
+partner_service.swagger.json
