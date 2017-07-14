@@ -1,0 +1,41 @@
+// States prot syntax verison, version 3 is current version.
+syntax = "proto3";
+
+// Defines package in generated code. For Go, should be same name as directory.
+package pb;
+
+// The Greeter service definition.
+service PartnerService {
+    // Takes a simple request and returns a simple reply.
+
+    rpc GetPartnerDataByKeyValue (KeyValueRequest) returns (PartnerDataReply) {}
+    rpc GetDataById (IdRequest) returns (PartnerDataReply) {}
+}
+
+
+// Message definitions.
+message KeyValueRequest {
+    string key = 1; //which key do we want?
+    string value = 2; //value of key
+    string group = 3; //which group
+}
+
+message IdRequest {
+    int32 partnerId = 1;
+    string partnerCode = 2;
+    string group = 3;
+}
+
+message PartnerDataReply {
+    int32 PartnerId = 1;
+    string PartnerCode = 2;
+    map<string,string> Attributes = 3;
+    string Error = 4;
+}
+
+message Partner {
+	string name = 1;
+	string code = 2;
+	int32 id = 3;
+	map<string,string> attributes = 4;
+}

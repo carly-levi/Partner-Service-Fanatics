@@ -1,0 +1,94 @@
+keyValueEndpoint:
+ALL GOOD:
+
+GOOD KEY & GOOD VALUE:
+good key, good value, good group: no error, return id, code, attributes (using FindPartnerAttribute)
+good key, good value, bad group: error for attributes, return id, code, make(map[string]string)
+good key, good value, nil group: no error, return id, code, all attributes (using FindAllAttributesForPartner)
+
+GOOD KEY & BAD VALUE:
+good key, bad value, good group: error, return 0, "", make(map[string]string)
+good key, bad value, bad group: error, return 0, "", make(map[string]string)
+good key, bad value, nil group: error, return 0, "", make(map[string]string)
+
+GOOD KEY & NIL VALUE:
+good key, nil value, good group: error, return 0, "", make(map[string]string)
+good key, nil value, bad group: error, return 0, "", make(map[string]string)
+good key, nil value, nil group: error, return 0, "", make(map[string]string)
+
+BAD KEY & GOOD VALUE:
+bad key, good value, good group: error, return 0, "", make(map[string]string)
+bad key, good value, bad group: error, return 0, "", make(map[string]string)
+bad key, good value, nil group: error, return 0, "", make(map[string]string)
+
+BAD KEY & BAD VALUE:
+bad key, bad value, good group: error, return 0, "", make(map[string]string)
+bad key, bad value, bad group: error, return 0, "", make(map[string]string)
+bad key, bad value, nil group: error, return 0, "", make(map[string]string)
+
+BAD KEY & NIL VALUE:
+bad key, nil value, good group: error, return 0, "", make(map[string]string)
+bad key, nil value, bad group: error, return 0, "", make(map[string]string)
+bad key, nil value, nil group: error, return 0, "", make(map[string]string)
+
+NIL KEY & GOOD VALUE:
+nil key, good value, good group: error, return 0, "", make(map[string]string)
+nil key, good value, bad group: error, return 0, "", make(map[string]string)
+nil key, good value, nil group: error, return 0, "", make(map[string]string)
+
+NIL KEY & BAD VALUE:
+nil key, bad value, good group: error, return 0, "", make(map[string]string)
+nil key, bad value, bad group: error, return 0, "", make(map[string]string)
+nil key, bad value, nil group: error, return 0, "", make(map[string]string)
+
+NIL KEY & NIL VALUE:
+nil key, nil value, good group: error, return 0, "", make(map[string]string)
+nil key, nil value, bad group: error, return 0, "", make(map[string]string)
+nil key, nil value, nil group: error, return 0, "", make(map[string]string)
+
+getDataByIdEndpoint:
+
+GOOD ID & GOOD CODE:
+good id, good code, good group: no error, return id, code, attributes (using FindPartnerAttribute)
+good id, good code, bad group: error for attributes, return id, code, make(map[string]string)
+good id, good code, nil group: no error, return id, code, all attributes (using FindAllAttributesForPartner)
+
+GOOD ID & BAD CODE:
+good id, bad code, good group: error, return 0, "", make(map[string]string)
+good id, bad code, bad group: error, return 0, "", make(map[string]string)
+good id, bad code, nil group: error, return 0, "", make(map[string]string)
+
+GOOD ID & NIL CODE:
+good id, nil code, good group: no error, return id, code, attributes (using FindPartnerAttribute)
+good id, nil code, bad group: error for attributes, return id, code, make(map[string]string)
+good id, nil code, nil group: no error, return id, code, all attributes (using FindAllAttributesForPartner)
+
+BAD ID & GOOD CODE:
+bad id, good code, good group: error, return 0, "", make(map[string]string)
+bad id, good code, bad group: error, return 0, "", make(map[string]string)
+bad id, good code, nil group: error, return 0, "", make(map[string]string)
+
+BAD ID & BAD CODE:
+bad id, bad code, good group: error, return 0, "", make(map[string]string)
+bad id, bad code, bad group: error, return 0, "", make(map[string]string)
+bad id, bad code, nil group: error, return 0, "", make(map[string]string)
+
+BAD ID & NIL CODE:
+bad id, nil code, good group: error, return 0, "", make(map[string]string)
+bad id, nil code, bad group: error, return 0, "", make(map[string]string)
+bad id, nil code, nil group: error, return 0, "", make(map[string]string)
+
+NIL ID & GOOD CODE:
+nil id, good code, good group: no error, return id, code, attributes (using FindPartnerAttribute)
+nil id, good code, bad group: error for attributes, return id, code, make(map[string]string)
+nil id, good code, nil group: no error, return id, code, all attributes (using FindAllAttributesForPartner)
+
+NIL ID & BAD CODE:
+nil id, bad code, good group: error, return 0, "", make(map[string]string)
+nil id, bad code, bad group: error, return 0, "", make(map[string]string)
+nil id, bad code, nil group: error, return 0, "", make(map[string]string)
+
+NIL ID & NIL CODE:
+nil id, nil code, good group: error, return 0, "", make(map[string]string)
+nil id, nil code, bad group: error, return 0, "", make(map[string]string)
+nil id, nil code, nil group: error, return 0, "", make(map[string]string)
